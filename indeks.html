@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gua ahmad gua bisa coding</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            transition: background-color 0.5s ease;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+        
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+        
+        .page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        #page2 {
+            background-color: #e74c3c;
+            color: white;
+        }
+        
+        #page2 h1 {
+            color: white;
+        }
+        
+        .highlight {
+            background-color: #f39c12;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div id="page1" class="page">
+        <div class="container">
+            <h1>welcome akbar ramadhan maulana malik jibar al firaun</h1>
+            <a href="#" class="btn" onclick="showPage(2)">Lihat Pesan</a>
+        </div>
+    </div>
+    
+    <div id="page2" class="page hidden">
+        <div class="container">
+            <h1>selamat membaca kata kata dari orang ganteng</h1>
+            <p>
+                akbar jelek main ml cupu selalu di gendong <span class="highlight">ARJUNA RISOL MAYO</span><br>
+                main pubg juga sama aja di gendong mulu sama <span class="highlight">RII FIRECE MODE</span><br>
+                sekian terimakasih
+            </p>
+            <a href="#" class="btn" onclick="showPage(1)">Kembali</a>
+        </div>
+    </div>
+    
+    <script>
+        function showPage(pageNum) {
+            // Sembunyikan semua halaman
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.add('hidden');
+            });
+            
+            // Tampilkan halaman yang dipilih
+            document.getElementById(`page${pageNum}`).classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
